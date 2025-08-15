@@ -1,4 +1,8 @@
 
+
+all: main.pdf
+
+.PHONY: main.pdf
 main.pdf:
 	latexmk -pdf main.tex
 
