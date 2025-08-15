@@ -1,0 +1,19 @@
+%%-----------------------------------table of contents--------------------------------------------
+\selectlanguage{english}
+{\fontsize{12}{16}
+	\tableofcontents
+	\addcontentsline{toc}{chapter}{Table of Contents}
+	%% you can change the structure of letting the lists together on the same page or start a new page each time, that is up to you
+	{
+	\let\clearpage\relax
+	\listoffigures\addcontentsline{toc}{chapter}{List of Figures}
+	\listoftables\addcontentsline{toc}{chapter}{List of Tables}
+	}%
+	{
+		\glsaddall % adds all the acronyms and symbols to their respective lists
+		\printglossary[type=\acronymtype,title={List of Abbreviations},style=long]
+		% list of acronyms
+		\let\clearpage\relax
+		%\printglossary[type=symbols,style=symbunitlong]   % list of symbols
+	}
+}%
